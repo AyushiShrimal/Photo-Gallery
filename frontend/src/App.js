@@ -12,6 +12,7 @@ useEffect(() => {
   axios.get("http://localhost:5000/api/get")
   .then((res) => {
      console.log(res.data);
+    console.log(typeof res.data[0].photo)
      setPhotos(res.data)
   })
   .catch((err) => console.log(err));
