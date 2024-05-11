@@ -6,7 +6,7 @@ const router = Router();
 
 router.get("/api.get", async (req, res)=> {
    const allphotos = await UploadModel.find().sort({ createAt: "descending" });
-   res.send(allPhotos)
+   res.send(allphotos)
 });
 
 router.post("/api/save", uploadMiddleware.single("photo"), (req, res) => {
